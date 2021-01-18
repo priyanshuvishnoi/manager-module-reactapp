@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import CompletedView from './Completed';
 import FutureList from './Future';
 import Info from './Info';
+import RejectedView from './Rejected';
 import Search from './Search';
 import SideBar from './Sidebar';
 import Today from './Today';
@@ -17,6 +19,8 @@ const DashBoard = () => {
         <WelcomeView />
         {current === 0 ? <Today /> : null}
         {current === 1 ? <FutureList /> : null}
+        {current === 2 ? <CompletedView /> : null}
+        {current === 3 ? <RejectedView /> : null}
       </div>
       <Info current={current} />
     </div>

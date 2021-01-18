@@ -6,23 +6,25 @@ import '../styles/maps.css';
 const Home = () => {
   const setCurrent = () => {};
   return (
-    <div class="grid grid-cols-6">
+    <div className="grid grid-cols-6">
       <Link to="/dashboard">
-        <SideBar setCurrent={setCurrent} />
+        <div style={{ marginLeft: '60%' }}>
+          <SideBar setCurrent={setCurrent} current={4} />
+        </div>
       </Link>
-      <div class="col-span-5 relative">
-        <div class="name-tag absolute top-0 right-0">
-          <p class="bg-orange text-white px-2 py-2 rounded-sm font-bold">
+      <div className="col-span-5 relative">
+        <div className="name-tag absolute top-0 right-0">
+          <p className="bg-orange text-white px-2 py-2 rounded-sm font-bold">
             {' '}
             Welcome, Mr Manager
           </p>
         </div>
 
-        <div class="mapouter">
-          <div class="gmap_canvas">
+        <div className="mapouter">
+          <div className="gmap_canvas">
             <iframe
               title="maps"
-              class="w-screen h-screen"
+              className="w-screen h-screen"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=jamia%20hamdard%20university&t=&z=11&ie=UTF8&iwloc=&output=embed"
               frameborder="0"
